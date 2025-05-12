@@ -30,8 +30,9 @@ EOF
 umask 022
 git clone --depth 1 --branch master --single-branch --no-tags --recurse-submodules https://github.com/fantastic-packages/packages package/fantastic_packages
 
-cp ../myConfig.12052025 myConfig.12052025
+#cp ../myConfig.12052025 .config
 make menuconfig
 
 make -j$(nproc)
 cp  openwrt/bin/targets/mediatek/filogic/openwrt-mediatek-filogic-bananapi_bpi-r4-sdcard.img.gz openwrt-bananapi_r4_fantastic-sdcard_$(date +"%Y_%m_%d_%I_%M_%p").img.gz
+
